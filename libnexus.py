@@ -130,7 +130,7 @@ def cmd_init(args):
 def repo_find(path=".", required=True):
     path = os.path.realpath(path)
 
-    if os.path.isdir(os.path.join(path, ".git")):
+    if os.path.isdir(os.path.join(path, ".nexus")):
         return NexusRepository(path)
 
     parent = os.path.realpath(os.path.join(path, ".."))
